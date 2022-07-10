@@ -1,6 +1,6 @@
 # Build-Your-Own-RESTful-API
 
-This is a RESTful API exemple for beginners on programming. This is a wiki API, about some techs and tools that that i've learned through my courses.
+This is a RESTful API exemple for beginners on programming. This is a wiki API about some techs and tools that i've learned through my courses.
 
 ## You'll need to:
 ```
