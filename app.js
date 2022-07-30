@@ -1,9 +1,13 @@
+require('dotenv').config()
+
 const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
+
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 
@@ -15,7 +19,7 @@ app.use(express.static("public"));
 
 // CONNECT TO MONGOOSE
 
-mongoose.connect("mongodb://localhost:27017/wikiDB");
+mongoose.connect(process.env.MONGO_URI);
 
 // ARTICLE SCHEMA
 
@@ -134,9 +138,9 @@ app.route("/articles/:articlesTitle")
 
 // LISTEN TO 
 
-app.listen(3000, (req, res) => {
-    console.log("Server started on PORT 3000");
-});
+// LISTEN ROUTE
+app.listen(port, () => console.log(`Server started at port: ${port}`)
+);
 
 
 
